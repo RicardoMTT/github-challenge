@@ -1,0 +1,70 @@
+<div class="jobs">
+  <div class="jobs__container">
+    <div
+      class="row mb-4 bg-white w-100 pt-3 pb-3 shadow-sm bg-white"
+      *ngFor="
+        let job of this.jobQuery.jobs$
+          | async
+          | paginate: { itemsPerPage: 5, currentPage: p }
+      "
+      style="border-radius: 10px"
+      [routerLink]="['/job-details/', job.id]"
+    >
+      <div class="col-md-2 d-flex">
+        <img
+          src="https://para-pruebas-back.herokuapp.com{{
+            job.empresa.avatar.url
+          }}"
+          width="90"
+          height="90"
+          alt=""
+        />
+      </div>
+      <div class="col-md-7">
+        <p style="color: #334680; font-weight: bold" class="mt-2">
+          {{ job.empresa?.nombre }}
+        </p>
+        <p style="color: #334680">
+          {{ job.titulo }}
+        </p>
+
+        <button
+          type="button"
+          class="btn btn-outline-secondary"
+          *ngIf="job.tipo == 'Part-time'"
+        >
+          {{ job.tipo }}
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-primary"
+          *ngIf="job.tipo == 'Full-Time'"
+        >
+          {{ job.tipo }}
+        </button>
+      </div>
+      <div class="col-md-3 d-flex align-items-end justify-content-between mt-3">
+        <p
+          style="color: #b9bdcf; align-items: center; margin: 0"
+          class="d-flex"
+        >
+          <!-- <img
+            src="assets/home/world.svg"
+            style="width: 20px; margin-right: 10px"
+            alt=""
+          /> -->
+          <span class="material-icons"> </span>{{ job.ciudad }}
+        </p>
+        <p style="color: #b9bdcf; margin: 0" class="d-flex">5 days ago</p>
+        <!-- <button
+          class="btn btn-primary"
+          [routerLink]="['/job-details/', job.id]"
+        >
+          Aplicar
+        </button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<pagination-controls (pageChange)="p = $event"></pagination-controls>

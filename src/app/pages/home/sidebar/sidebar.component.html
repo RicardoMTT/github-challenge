@@ -1,0 +1,50 @@
+<div class="sidebar">
+  <div class="sidebar__content">
+    <div class="sidebar__content__form">
+      <div
+        class="form-check mt-3 mb-3 sidebar__content__form__div"
+        [formGroup]="typeForm"
+      >
+        <ng-container
+          *ngFor="let checkbox of checkboxes; let i = index"
+          formArrayName="typeWork"
+        >
+          <label class="sidebar__content__form__div__type-work">
+            <input type="checkbox" [formControlName]="i" name="xd" />
+            {{ checkbox.name }}</label
+          >
+          <br />
+        </ng-container>
+      </div>
+      <div>
+        <br />
+      </div>
+      <div [formGroup]="citiesForm">
+        <div class="form-check mb-3">
+          <label for="todos">
+            <input
+              type="radio"
+              name="cities"
+              id="todos"
+              value="todos"
+              formControlName="cities"
+            />Todos</label
+          >
+        </div>
+
+        <div class="form-check mb-3" *ngFor="let citie of cities">
+          <label for="enum_answer_{{ citie.nombre }}">
+            <input
+              id="enum_answer_{{ citie.nombre }}"
+              [value]="citie.nombre"
+              type="radio"
+              name="cities"
+              formControlName="cities"
+            />
+            {{ citie.nombre }}
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

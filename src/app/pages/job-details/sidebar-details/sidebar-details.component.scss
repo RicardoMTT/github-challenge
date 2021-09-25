@@ -1,0 +1,39 @@
+.sidebar-details {
+  &__back {
+    a {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 21px;
+      /* identical to box height */
+
+      color: #1e86ff;
+    }
+  }
+
+  &__apply {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #b9bdcf;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  &__email {
+    p {
+      color: #334680;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 21px;
+      span {
+        color: #1e86ff;
+      }
+    }
+  }
+}

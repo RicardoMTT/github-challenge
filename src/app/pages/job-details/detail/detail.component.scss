@@ -1,0 +1,87 @@
+.detail-job {
+  &__title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    &__main {
+      display: flex;
+      @media (max-width: 480px) {
+        flex-direction: column;
+        button {
+          width: 70px;
+        }
+      }
+      h2 {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+        color: #334680;
+        margin-right: 15px;
+      }
+    }
+    &__hour {
+      margin-top: 10px;
+      span {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: #b7bcce;
+      }
+    }
+  }
+
+  &__location-company {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+
+    &__img {
+      margin-right: 10px;
+      width: 10%;
+      @media (max-width: 480px) {
+        width: 40%;
+      }
+      img {
+        border-radius: 10px;
+      }
+    }
+    &__text {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      &__secondary {
+        display: flex;
+        span {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 14px;
+          color: #b9bdcf;
+        }
+      }
+      h3 {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        color: #334680;
+      }
+    }
+  }
+  &__content {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+
+    color: #334680;
+  }
+}

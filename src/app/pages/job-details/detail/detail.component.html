@@ -1,0 +1,40 @@
+<div class="detail-job">
+  <div class="detail-job__title">
+    <div class="detail-job__title__main">
+      <h2>{{ job.titulo }}</h2>
+      <button type="button" class="btn btn-outline-primary">Full time</button>
+    </div>
+    <div class="detail-job__title__hour">
+      <span>5 days ago</span>
+    </div>
+  </div>
+  <div class="detail-job__location-company">
+    <div class="detail-job__location-company__img">
+      <img
+        src="https://para-pruebas-back.herokuapp.com{{
+          job.empresa.avatar.url
+        }}"
+        alt=""
+        width="80"
+        height="80"
+      />
+    </div>
+    <div class="detail-job__location-company__text">
+      <h3>{{ job.empresa.nombre }}</h3>
+      <div class="detail-job__location-company__text__secondary">
+        <img
+          src="assets/home/world.svg"
+          style="width: 20px; margin-right: 10px"
+          alt=""
+        />
+        <span class="material-icons"> </span>Lima
+      </div>
+    </div>
+  </div>
+  <div class="detail-job__content">
+    <p>
+      {{ job.descripcion }}
+    </p>
+  </div>
+  <div class=""></div>
+</div>

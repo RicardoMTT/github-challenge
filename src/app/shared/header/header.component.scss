@@ -1,0 +1,16 @@
+.header {
+  &__content {
+    display: flex;
+    &__github {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 900;
+      margin-right: 10px;
+    }
+    &__jobs {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 200;
+    }
+  }
+}

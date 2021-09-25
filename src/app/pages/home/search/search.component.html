@@ -1,0 +1,52 @@
+<div class="search">
+  <div class="search__content">
+    <div class="search__content__keyword">
+      <div class="col-md-12">
+        <div
+          [formGroup]="searchForm"
+          class="
+            g-12
+            d-flex
+            align-items-center
+            justify-content-center
+            p-3
+            bg-white
+            rounded-3
+            mw-100;
+          "
+        >
+          <!-- <div class="col-1 col-sm-4 col-md-1">
+            <span class="material-icons"> delete_outline </span>
+          </div> -->
+
+          <div class="col-7 col-sm-4 col-md-9">
+            <label for="inputPassword2" class="visually-hidden">Password</label>
+            <input
+              type="text"
+              class="text-truncate form-control mr-5"
+              style="border: none"
+              id="inputPassword2"
+              placeholder="Title, companies, expertise or benefits"
+              (keyup.enter)="searchJobs()"
+              formControlName="keyword"
+            />
+          </div>
+
+          <div
+            class="col-4 col-sm-4 col-md-2 pr-3"
+            style="height: 38px; display: flex; align-items: center"
+          >
+            <button
+              type="button"
+              class="btn btn-primary"
+              style="width: 100%"
+              (click)="searchJobs()"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

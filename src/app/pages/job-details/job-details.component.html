@@ -1,0 +1,13 @@
+<ng-container *ngIf="job | async as JobDetail">
+  <!-- {{ JobDetail | json }}   Formato arreglo -->
+  <div class="job-details">
+    <div class="job-details__left">
+      <app-sidebar-details
+        [emailCompany]="JobDetail[0].empresa?.correo"
+      ></app-sidebar-details>
+    </div>
+    <div class="job-details__right">
+      <app-detail [job]="JobDetail[0]"></app-detail>
+    </div>
+  </div>
+</ng-container>
